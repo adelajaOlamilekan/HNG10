@@ -6,6 +6,8 @@ app = FastAPI()
 STATUS_CODE = 200
 NAME = "adelaja_qowiyyu"
 TRACK = "backend"
+GITHUB_REPO_URL = "https://github.com/adelajaOlamilekan/HNG10"
+GITHUB_FILE_URL = "https://github.com/adelajaOlamilekan/HNG10/blob/main/task1/create_endpoint.py"
 weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 @app.get("/api")
@@ -20,8 +22,8 @@ async def get_data(slack_name: str | None = NAME, track: str | None = TRACK, sta
                     "current_day": weekday[datetime.datetime.today().weekday()],
                     "utc_time": current_time_with_offset,
                     "track": track,
-                    "github_file_url": "https://github.com/username/repo/blob/main/file_name.ext",
-                    "github_repo_url": "https://github.com/username/repo",
+                    "github_file_url": GITHUB_FILE_URL,
+                    "github_repo_url": GITHUB_REPO_URL,
                     "status_code": status_code
                 }
     
