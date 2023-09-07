@@ -1,4 +1,2 @@
-cpython==3.10.7
 fastapi==0.103.1
 pytz==2022.2
-uvicorn==0.23.2
