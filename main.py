@@ -7,7 +7,7 @@ STATUS_CODE = 200
 NAME = "adelaja_qowiyyu"
 TRACK = "backend"
 GITHUB_REPO_URL = "https://github.com/adelajaOlamilekan/HNG10"
-GITHUB_FILE_URL = "https://github.com/adelajaOlamilekan/HNG10/blob/main/task1/create_endpoint.py"
+GITHUB_FILE_URL = "https://github.com/adelajaOlamilekan/HNG10/main/create_endpoint.py"
 weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 @app.get("/api")
