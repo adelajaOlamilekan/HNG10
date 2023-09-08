@@ -1,5 +1,11 @@
+
+
+
 from fastapi import FastAPI
-import datetime, pytz, random
+
+
+
+from datetime import datetime
 
 app = FastAPI()
 
@@ -12,14 +18,12 @@ weekday = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "
 
 @app.get("/api")
 async def get_data(slack_name: str = NAME, track: str = TRACK):
-    current_time_utc = datetime.datetime.now(pytz.utc)
-    current_time_with_offset = current_time_utc
-    current_time_with_offset = current_time_with_offset.strftime("%Y-%m-%dT%H:%M:%SZ")
+    current_time_utc = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
 
     user_data  = {
                     "slack_name": slack_name,
                     "current_day": weekday[datetime.datetime.today().weekday()],
-                    "utc_time": current_time_with_offset,
+                    "utc_time": current_time_utc,
                     "track": track,
                     "github_file_url": GITHUB_FILE_URL,
                     "github_repo_url": GITHUB_REPO_URL,
