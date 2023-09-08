@@ -22,7 +22,7 @@ async def get_data(slack_name: str = NAME, track: str = TRACK):
 
     user_data  = {
                     "slack_name": slack_name,
-                    "current_day": weekday[datetime.datetime.today().weekday()],
+                    "current_day": weekday[datetime.today().weekday()],
                     "utc_time": current_time_utc,
                     "track": track,
                     "github_file_url": GITHUB_FILE_URL,
